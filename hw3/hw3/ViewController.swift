@@ -21,9 +21,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func Calculate(_ sender: Any) {
+        let height = Double(HeightField.text!)
+        let weight = Double(WeightField.text!)
+        let bmi = calcBMI(height: height1, weight: weight!)
+        bmiLabel.text = String
+        let status = statusLabel
+        statusLabel.text = status
     }
    func calcBMI(height:Double, weight:Double){
-    var bmi = weight/(height*height)
+    let bmi = weight/(height*height)
         }
     func bmiStatus(bmi: Double)-> String{
         if bmi < 20 {
